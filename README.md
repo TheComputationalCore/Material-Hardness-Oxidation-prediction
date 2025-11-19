@@ -1,4 +1,4 @@
-# Material Hardness & Oxidation Prediction
+# 🔥 Material Hardness & Oxidation Prediction
 ### Intelligent Microstructure–Property Modeling for Materials Engineering  
 **Author:** Dinesh Chandra  
 **Live Demo:** https://your-deployment-url.com  
@@ -53,6 +53,7 @@ https://doi.org/10.1088/1757-899X/998/1/012061
 
 ## 🏗 Architecture
 
+```
 material-hardness-oxidation-prediction/
 │
 ├── data/                     # Datasets + documentation
@@ -69,6 +70,7 @@ material-hardness-oxidation-prediction/
 ├── render.yaml
 ├── Procfile
 └── runtime.txt
+```
 
 ---
 
@@ -97,7 +99,7 @@ material-hardness-oxidation-prediction/
 
 ### **Oxidation Explainability (SHAP)**
 <div align="center">
-  <img src="screenscreenshots/demo-04-oxidation-shap.png" width="750">
+  <img src="screenshots/demo-04-oxidation-shap.png" width="750">
 </div>
 
 ---
@@ -108,12 +110,16 @@ material-hardness-oxidation-prediction/
 <summary><strong>Click to expand EDA visualizations</strong></summary>
 
 ### Hardness Dataset
-<img src="src/app/static/plots/eda_hardness_correlation.png" width="420">
-<img src="src/app/static/plots/eda_hardness_hist.png" width="420">
+<div align="center">
+  <img src="src/app/static/plots/eda_hardness_correlation.png" width="420">
+  <img src="src/app/static/plots/eda_hardness_hist.png" width="420">
+</div>
 
 ### Oxidation Dataset
-<img src="src/app/static/plots/eda_oxidation_correlation.png" width="420">
-<img src="src/app/static/plots/eda_oxidation_hist.png" width="420">
+<div align="center">
+  <img src="src/app/static/plots/eda_oxidation_correlation.png" width="420">
+  <img src="src/app/static/plots/eda_oxidation_hist.png" width="420">
+</div>
 
 </details>
 
@@ -125,14 +131,18 @@ material-hardness-oxidation-prediction/
 <summary><strong>Click to expand performance plots</strong></summary>
 
 ### Hardness Model
-<img src="src/app/static/plots/perf_hardness_actual_vs_pred.png" width="420">
-<img src="src/app/static/plots/perf_hardness_residuals.png" width="420">
-<img src="src/app/static/plots/fi_hardness_coefficients.png" width="420">
+<div align="center">
+  <img src="src/app/static/plots/perf_hardness_actual_vs_pred.png" width="420">
+  <img src="src/app/static/plots/perf_hardness_residuals.png" width="420">
+  <img src="src/app/static/plots/fi_hardness_coefficients.png" width="420">
+</div>
 
 ### Oxidation Model
-<img src="src/app/static/plots/perf_oxidation_actual_vs_pred.png" width="420">
-<img src="src/app/static/plots/perf_oxidation_residuals.png" width="420">
-<img src="src/app/static/plots/fi_oxidation_importances.png" width="420">
+<div align="center">
+  <img src="src/app/static/plots/perf_oxidation_actual_vs_pred.png" width="420">
+  <img src="src/app/static/plots/perf_oxidation_residuals.png" width="420">
+  <img src="src/app/static/plots/fi_oxidation_importances.png" width="420">
+</div>
 
 </details>
 
@@ -150,45 +160,60 @@ Each model provides:
 - Metadata for reproducibility  
 
 ### Training Scripts
-src/models/train_hardness.py  
+```
+src/models/train_hardness.py
 src/models/train_oxidation.py
+```
 
 ### Evaluation
+```
 src/models/evaluate.py
+```
 
 ---
 
 ## 🛠 Setup (Local Development)
 
 ### **1. Clone the repository**
+```bash
 git clone https://github.com/TheComputationalCore/Material-Hardness-Oxidation-Prediction
 cd Material-Hardness-Oxidation-Prediction
+```
 
 ### **2. Create environment**
+```bash
 conda create -n mhoc python=3.10
 conda activate mhoc
 pip install -r requirements.txt
+```
 
 ### **3. Run application**
+```bash
 python src/app/app.py
+```
 
-Open in browser:  
-http://localhost:5000
+Visit: http://localhost:5000
 
 ---
 
 ## 🧪 Testing
+```bash
 pytest -q
+```
 
 ---
 
 ## 🚀 Deployment (Render)
 
 ### **Build Command**
+```
 pip install -r requirements.txt
+```
 
 ### **Start Command**
+```
 gunicorn "app.app:app" --chdir src --bind 0.0.0.0:$PORT --workers 2
+```
 
 ---
 
@@ -202,10 +227,13 @@ gunicorn "app.app:app" --chdir src --bind 0.0.0.0:$PORT --workers 2
 
 ## 📄 Citation
 
-Dinesh Chandra (2020),  
-Machine learning–assisted prediction of mechanical properties of EN-8 alloy steel,  
-IOP Conference Series: Materials Science and Engineering, 998 (1), 012061.  
-https://doi.org/10.1088/1757-899X/998/1/012061
+```
+Dinesh Chandra (2020),
+Experimental Studies of Stellite-6 hardfacing layer on EN-8 and mildsteel
+IOP Conference Series: Materials Science and Engineering, 998 (1), 012061.
+```
+
+Paper: https://doi.org/10.1088/1757-899X/998/1/012061
 
 ---
 
