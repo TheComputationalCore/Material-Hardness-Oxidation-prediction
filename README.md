@@ -54,7 +54,7 @@ https://doi.org/10.1088/1757-899X/998/1/012061
 ---
 
 ## 🏗 Architecture  
-
+---
 material-hardness-oxidation-prediction/
 │
 ├── data/ # Datasets with documentation
