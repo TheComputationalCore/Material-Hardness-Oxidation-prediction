@@ -43,7 +43,7 @@ Experiments are **expensive and time-intensive**, motivating the need for **AI s
 
 This system extends the ideas from:
 
-**Dinesh Chandra (2020). Machine learning–assisted prediction of mechanical properties of EN-8 alloy steel.**  
+**Dinesh Chandra (2020). Experimental Studies of Stellite-6 hardfacing layer on EN-8 & mild-steel.**  
 IOP Conference Series: Materials Science and Engineering.  
 https://doi.org/10.1088/1757-899X/998/1/012061
 
