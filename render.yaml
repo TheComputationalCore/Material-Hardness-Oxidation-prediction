@@ -9,6 +9,10 @@ services:
       pip install --upgrade pip
       pip install -r requirements.txt
 
-    startCommand: gunicorn "src.app.app:create_app()" --bind 0.0.0.0:$PORT
+    startCommand: >
+      gunicorn "src.app.app:create_app()"
+      --bind 0.0.0.0:$PORT
+      --workers 2
+      --timeout 120
 
     autoDeploy: true
