@@ -223,17 +223,6 @@ gunicorn "app.app:app" --chdir src --bind 0.0.0.0:$PORT --workers 2
 
 ---
 
-## 📄 Citation
-
-```
-Dinesh Chandra (2020),
-Experimental Studies of Stellite-6 hardfacing layer on EN-8 and mildsteel
-IOP Conference Series: Materials Science and Engineering, 998 (1), 012061.
-```
-
-Paper: https://doi.org/10.1088/1757-899X/998/1/012061
-
----
 
 ## 👤 Author
 
