@@ -26,7 +26,7 @@ def predict():
         "Current": current,
         "Heat_Input": heat_input,
         "Carbon": carbon,
-        "Manganese": manganese
+        "Manganese": manganese,
     }
 
     oxidation_payload = {
@@ -35,22 +35,22 @@ def predict():
         "Heat_Input": heat_input,
         "Soaking_Time": soaking_time,
         "Carbon": carbon,
-        "Manganese": manganese
+        "Manganese": manganese,
     }
 
-    hardness_result = predict_hardness(hardness_payload)
-    oxidation_result = predict_oxidation(oxidation_payload)
+    # Call prediction (ignore return because UI currently does not display it)
+    predict_hardness(hardness_payload)
+    predict_oxidation(oxidation_payload)
 
     return render_template(
-    "index.html",
-    hardness=None,
-    oxidation=None,
-    hardness_error=None,
-    oxidation_error=None,
-    selected_material=None,
-    form_data=None
-)
-
+        "index.html",
+        hardness=None,
+        oxidation=None,
+        hardness_error=None,
+        oxidation_error=None,
+        selected_material=None,
+        form_data=None,
+    )
 
 
 # New JSON API for async UI
@@ -61,8 +61,6 @@ def api_predict():
     except Exception:
         return jsonify({"error": "Invalid JSON"}), 400
 
-    # Expect payload to contain the fields we need; don't fail fast here,
-    # predict_* will return sensible errors if validation fails
     hardness_result = predict_hardness(payload)
     oxidation_result = predict_oxidation(payload)
 
@@ -73,5 +71,4 @@ def api_predict():
         "oxidation_error": oxidation_result.get("error"),
     }
 
-    # keep HTTP 200 even with prediction errors (client will display them)
     return jsonify(response), 200
