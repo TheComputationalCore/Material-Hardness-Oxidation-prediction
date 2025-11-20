@@ -1,6 +1,54 @@
 #   Material Hardness & Oxidation Prediction  
 ### Intelligent Microstructure–Property Modeling for Materials Engineering  
 
+<p align="center">
+
+  <!-- Python version -->
+  <a href="https://www.python.org/downloads/">
+    <img src="https://img.shields.io/badge/Python-3.10-blue.svg" alt="Python 3.10">
+  </a>
+
+  <!-- Framework -->
+  <a href="https://flask.palletsprojects.com/">
+    <img src="https://img.shields.io/badge/Framework-Flask-000000.svg?logo=flask" alt="Flask">
+  </a>
+
+  <!-- Machine Learning -->
+  <a href="https://scikit-learn.org/">
+    <img src="https://img.shields.io/badge/ML-Scikit--Learn-FCBA03.svg?logo=scikitlearn" alt="scikit-learn">
+  </a>
+
+  <!-- SHAP -->
+  <a href="https://shap.readthedocs.io/en/latest/">
+    <img src="https://img.shields.io/badge/Explainability-SHAP-EA4C89.svg" alt="SHAP">
+  </a>
+
+  <!-- Render Deployment -->
+  <a href="https://render.com/">
+    <img src="https://img.shields.io/badge/Deploy-Render-46E3B7.svg?logo=render" alt="Render">
+  </a>
+
+  <!-- License -->
+  <a href="LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="MIT License">
+  </a>
+
+  <!-- Tests -->
+  <a href="https://github.com/TheComputationalCore/Material-Hardness-Oxidation-Prediction/actions">
+    <img src="https://github.com/TheComputationalCore/Material-Hardness-Oxidation-Prediction/actions/workflows/tests.yml/badge.svg" alt="Tests">
+  </a>
+
+  <!-- Last Commit -->
+  <img src="https://img.shields.io/github/last-commit/TheComputationalCore/Material-Hardness-Oxidation-Prediction" alt="Last Commit">
+
+  <!-- Repo Size -->
+  <img src="https://img.shields.io/github/repo-size/TheComputationalCore/Material-Hardness-Oxidation-Prediction" alt="Repo Size">
+
+  <!-- Stars -->
+  <img src="https://img.shields.io/github/stars/TheComputationalCore/Material-Hardness-Oxidation-Prediction?style=social" alt="Stars">
+
+</p>
+
 **Live Demo:** https://material-hardness-oxidation-prediction.onrender.com  
 
 **Research Backing:**  
