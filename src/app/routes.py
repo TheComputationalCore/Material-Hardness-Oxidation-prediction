@@ -1,4 +1,5 @@
 # src/app/routes.py
+
 from flask import Blueprint, render_template, request, jsonify
 from src.inference.predict import predict_hardness, predict_oxidation
 
@@ -10,15 +11,23 @@ def index():
     return render_template("index.html")
 
 
+def _convert(value):
+    """Convert form values to numeric when possible."""
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        return value  # Keep as string for Material
+
+
 @app_bp.route("/predict", methods=["POST"])
 def predict():
-    # Backwards-compatible form POST (server-rendered)
+    # Read form inputs
     material = request.form.get("Material")
-    current = request.form.get("Current")
-    heat_input = request.form.get("Heat_Input")
-    soaking_time = request.form.get("Soaking_Time")
-    carbon = request.form.get("Carbon")
-    manganese = request.form.get("Manganese")
+    current = _convert(request.form.get("Current"))
+    heat_input = _convert(request.form.get("Heat_Input"))
+    soaking_time = _convert(request.form.get("Soaking_Time"))
+    carbon = _convert(request.form.get("Carbon"))
+    manganese = _convert(request.form.get("Manganese"))
 
     # Build payloads
     hardness_payload = {
@@ -38,22 +47,22 @@ def predict():
         "Manganese": manganese,
     }
 
-    # Call prediction (ignore return because UI currently does not display it)
-    predict_hardness(hardness_payload)
-    predict_oxidation(oxidation_payload)
+    # Get predictions
+    hardness_result = predict_hardness(hardness_payload)
+    oxidation_result = predict_oxidation(oxidation_payload)
 
     return render_template(
         "index.html",
-        hardness=None,
-        oxidation=None,
-        hardness_error=None,
-        oxidation_error=None,
-        selected_material=None,
-        form_data=None,
+        hardness=hardness_result.get("prediction"),
+        oxidation=oxidation_result.get("prediction"),
+        hardness_error=hardness_result.get("error"),
+        oxidation_error=oxidation_result.get("error"),
+        selected_material=material,
+        form_data=request.form,
     )
 
 
-# New JSON API for async UI
+# JSON API for async UI
 @app_bp.route("/api/v1/predict", methods=["POST"])
 def api_predict():
     try:
@@ -61,14 +70,20 @@ def api_predict():
     except Exception:
         return jsonify({"error": "Invalid JSON"}), 400
 
+    # Convert numeric fields here also
+    for key in ["Current", "Heat_Input", "Soaking_Time", "Carbon", "Manganese"]:
+        if key in payload:
+            try:
+                payload[key] = float(payload[key])
+            except Exception:
+                pass  # Ignore; inference layer will validate
+
     hardness_result = predict_hardness(payload)
     oxidation_result = predict_oxidation(payload)
 
-    response = {
+    return jsonify({
         "hardness": hardness_result.get("prediction"),
         "oxidation": oxidation_result.get("prediction"),
         "hardness_error": hardness_result.get("error"),
         "oxidation_error": oxidation_result.get("error"),
-    }
-
-    return jsonify(response), 200
+    }), 200
