@@ -1,10 +1,10 @@
-# 🔥 Material Hardness & Oxidation Prediction  
+#   Material Hardness & Oxidation Prediction  
 ### Intelligent Microstructure–Property Modeling for Materials Engineering  
 
 **Live Demo:** https://material-hardness-oxidation-prediction.onrender.com  
 
 **Research Backing:**  
-[Machine learning–assisted prediction of mechanical properties of EN‑8 alloy steel — IOP Conference Series](https://iopscience.iop.org/article/10.1088/1757-899X/998/1/012061)
+[Experimental Studies of Stellite-6 Hardfaced Layer on Ferrous Materials by Tig Surfacing Process — IOP Conference Series](https://iopscience.iop.org/article/10.1088/1757-899X/998/1/012061)
 
 ---
 
@@ -41,7 +41,7 @@ Physical experiments are **expensive and time‑consuming**, motivating AI surro
 This system extends ideas from:
 
 **Dinesh Chandra (2020)**  
-*Experimental Studies of Stellite‑6 hardfacing layer on EN‑8 & Mild Steel*  
+*Experimental Studies of Stellite-6 Hardfaced Layer on Ferrous Materials by Tig Surfacing Process*  
 IOP Conference Series: Materials Science and Engineering  
 https://doi.org/10.1088/1757-899X/998/1/012061  
 
