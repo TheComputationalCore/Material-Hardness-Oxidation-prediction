@@ -1,6 +1,6 @@
 {
     "model_name": "Hardness Model",
-    "trained_on": "2025-11-19 01:20:53",
+    "trained_on": "2025-11-20 18:50:16",
     "features": [
         "Material",
         "Current",
