@@ -83,9 +83,8 @@ Physical experiments are **expensive and time‑consuming**, motivating AI surro
 
 This system extends ideas from:
 
-**Dinesh Chandra (2020)**  
-*Experimental Studies of Stellite-6 Hardfaced Layer on Ferrous Materials by Tig Surfacing Process*  
-IOP Conference Series: Materials Science and Engineering  
+Citation C Dinesh Chandra et al 2020 IOP Conf. Ser.: Mater. Sci. Eng. 998 012061
+DOI 10.1088/1757-899X/998/1/012061  
 https://doi.org/10.1088/1757-899X/998/1/012061  
 
 ---
