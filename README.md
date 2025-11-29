@@ -39,8 +39,6 @@
   <!-- Repo Size -->
   <img src="https://img.shields.io/github/repo-size/TheComputationalCore/Material-Hardness-Oxidation-Prediction" alt="Repo Size">
 
-  <!-- Stars -->
-  <img src="https://img.shields.io/github/stars/TheComputationalCore/Material-Hardness-Oxidation-Prediction?style=social" alt="Stars">
 
 </p>
 
