@@ -152,7 +152,7 @@ This work provides empirical validation for heat input, microstructure, hardness
 
 ---
 
-# 🧩 Directory Structure (Complete)
+# 🧩 Directory Structure 
 
 ```
 material-hardness-oxidation-prediction/
