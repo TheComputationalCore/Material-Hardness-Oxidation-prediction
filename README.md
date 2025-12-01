@@ -144,23 +144,8 @@ DOI: 10.1088/1757-899X/998/1/012061
 ### Explainability  
 - Global SHAP  
 - Local SHAP  
-- Sensitivity analysis  
-
----
-
-# 📐 Mathematical Framework  
-\[
-\hat{H} = f(X_{process}, X_{composition})
-\]
-
-\[
-\hat{O} = g(T, t, X_{alloy})
-\]
-
-\[
-\mathcal{L} = \frac{1}{N}\sum (y_i - \hat{y}_i)^2
-\]
-
+- Sensitivity analysis
+  
 ---
 
 # 🧩 Directory Structure  
