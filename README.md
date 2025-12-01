@@ -79,38 +79,54 @@ DOI: 10.1088/1757-899X/998/1/012061
 (Images referenced from repo paths)
 
 ```
-screenshots/demo-01-home.png
-screenshots/demo-02-predict.png
-screenshots/demo-03-hardness-shap.png
-screenshots/demo-04-oxidation-shap.png
+<img src="screenshots/demo-01-home.png" width="750">
+
+### **Prediction Workflow**
+<img src="screenshots/demo-02-predict.png" width="750">
+
+### **Hardness Explainability (SHAP)**
+<img src="screenshots/demo-03-hardness-shap.png" width="750">
+
+### **Oxidation Explainability (SHAP)**
+<img src="screenshots/demo-04-oxidation-shap.png" width="750">
+
 ```
 
 ---
 
 # 📊 Exploratory Data Analysis  
 ```
-src/app/static/plots/eda_hardness_correlation.png
-src/app/static/plots/eda_hardness_hist.png
-src/app/static/plots/eda_oxidation_correlation.png
-src/app/static/plots/eda_oxidation_hist.png
+<details>
+<summary><strong>Expand EDA Visualizations</strong></summary>
+
+### Hardness Dataset
+<img src="src/app/static/plots/eda_hardness_correlation.png" width="420">
+<img src="src/app/static/plots/eda_hardness_hist.png" width="420">
+
+### Oxidation Dataset
+<img src="src/app/static/plots/eda_oxidation_correlation.png" width="420">
+<img src="src/app/static/plots/eda_oxidation_hist.png" width="420">
+
+</details>
+
 ```
 
 ---
+## 📈 Model Performance & Diagnostics
+<details>
+<summary><strong>Expand Performance Visuals</strong></summary>
 
-# 📈 Model Performance  
-Hardness:  
-```
-perf_hardness_actual_vs_pred.png
-perf_hardness_residuals.png
-fi_hardness_coefficients.png
-```
+### Hardness Model
+<img src="src/app/static/plots/perf_hardness_actual_vs_pred.png" width="420">
+<img src="src/app/static/plots/perf_hardness_residuals.png" width="420">
+<img src="src/app/static/plots/fi_hardness_coefficients.png" width="420">
 
-Oxidation:  
-```
-perf_oxidation_actual_vs_pred.png
-perf_oxidation_residuals.png
-fi_oxidation_importances.png
-```
+### Oxidation Model
+<img src="src/app/static/plots/perf_oxidation_actual_vs_pred.png" width="420">
+<img src="src/app/static/plots/perf_oxidation_residuals.png" width="420">
+<img src="src/app/static/plots/fi_oxidation_importances.png" width="420">
+
+</details>
 
 ---
 
