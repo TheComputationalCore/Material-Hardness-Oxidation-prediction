@@ -36,6 +36,8 @@ It integrates:
 # 🔬 Scientific Foundation
 This system is grounded in the experimental paper:
 
+https://iopscience.iop.org/article/10.1088/1757-899X/998/1/012061
+
 **“Experimental Studies of Stellite-6 Hardfaced Layer on Ferrous Materials by TIG Surfacing Process”**  
 IOP Conf. Ser.: Materials Science & Engineering  
 Vol. 998 (2020), 012061  
