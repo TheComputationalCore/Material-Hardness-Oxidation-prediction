@@ -76,9 +76,9 @@ DOI: 10.1088/1757-899X/998/1/012061
 ---
 
 # 🎨 UI Showcase  
-(Images referenced from repo paths)
 
-```
+
+### **Home Interface**
 <img src="screenshots/demo-01-home.png" width="750">
 
 ### **Prediction Workflow**
@@ -90,12 +90,11 @@ DOI: 10.1088/1757-899X/998/1/012061
 ### **Oxidation Explainability (SHAP)**
 <img src="screenshots/demo-04-oxidation-shap.png" width="750">
 
-```
 
 ---
 
 # 📊 Exploratory Data Analysis  
-```
+
 <details>
 <summary><strong>Expand EDA Visualizations</strong></summary>
 
@@ -108,8 +107,6 @@ DOI: 10.1088/1757-899X/998/1/012061
 <img src="src/app/static/plots/eda_oxidation_hist.png" width="420">
 
 </details>
-
-```
 
 ---
 ## 📈 Model Performance & Diagnostics
