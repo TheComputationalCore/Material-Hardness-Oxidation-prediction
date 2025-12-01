@@ -56,8 +56,8 @@ This work provides empirical validation for heat input, microstructure, hardness
 │ Hardness Model │      │ Oxidation Model  │       │   Metadata System    │
 │ LinearReg / RF │      │ Random Forest    │       │ Versioning • Hashing │
 └───────┬────────┘      └──────────┬──────-┘       └──────────┬───────────┘
-        │                           │                        │
-        └────────────┬──────────────┴──────────────┬─────────┘
+        │                           │                         │
+        └────────────┬──────────────┴──────────────┬─────────-┘
                      ▼                             ▼
          ┌──────────────────-─┐          ┌────────────────────────┐
          │ SHAP Explainability│          │ Performance Diagnostics│
