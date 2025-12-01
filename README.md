@@ -1,204 +1,181 @@
-
-# 🌌 **Material Hardness & Oxidation Prediction**
-### ⚙️ *A Full-Stack, Research-Grade, Enterprise-Ready Materials Intelligence Platform*
+# 🌌 Material Hardness & Oxidation Prediction  
+### **AI-Driven Microstructure–Property Intelligence Platform for Materials Engineering**  
+A research-grade system integrating machine learning, explainable AI, scientific modeling, and fully modular production engineering.
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3.10-blue">
-  <img src="https://img.shields.io/badge/Framework-Flask-black?logo=flask">
-  <img src="https://img.shields.io/badge/ML-Scikit--Learn-yellow?logo=scikitlearn">
-  <img src="https://img.shields.io/badge/Explainability-SHAP-pink">
-  <img src="https://img.shields.io/badge/Deployment-Render-teal">
-  <img src="https://img.shields.io/badge/Testing-Pytest-purple">
-  <img src="https://img.shields.io/badge/License-MIT-green">
+  <img src="https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Flask-Web%20Framework-black?style=for-the-badge&logo=flask">
+  <img src="https://img.shields.io/badge/Scikit--Learn-ML%20Pipelines-FCC624?style=for-the-badge&logo=scikitlearn">
+  <img src="https://img.shields.io/badge/Explainability-SHAP-ff69b4?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Deployment-Render-46E3B7?style=for-the-badge&logo=render">
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge">
 </p>
 
----
+# ⭐ Executive Summary
+Material Hardness & Oxidation Prediction (**MHOC**) is a high-fidelity materials intelligence platform engineered for precise prediction of **hardness** and **oxidation rate** in ferrous alloys.  
 
-# 🚀 **Executive Summary**
-
-This repository delivers a **state-of-the-art materials engineering intelligence system** combining:
-
-- High-fidelity **microstructure → property prediction**
-- Industrial-grade **ML pipeline automation**
-- **SHAP-powered interpretability**
-- Full-stack **web deployment**
-- **Enterprise architecture**, modular and scalable
-
-Designed for  
-✔ Research labs  
-✔ Surface engineering teams  
-✔ Manufacturing AI groups  
-✔ Academic courses  
-✔ Industrial R&D centers  
+It integrates:
+- ML regression models  
+- SHAP-based explainability  
+- Scientific microstructure–property modeling  
+- Production-grade modular architecture  
+- Diagnostics, EDA, and a full web interface  
 
 ---
 
-# 🌐 **Live Demo**
-**https://material-hardness-oxidation-prediction.onrender.com**
+# 🔬 Scientific Foundation
+Grounded in the peer-reviewed research:
+
+**“Experimental Studies of Stellite-6 Hardfaced Layer on Ferrous Materials by TIG Surfacing Process”**  
+IOP Conference Series: Materials Science and Engineering  
+Vol. 998 (2020), 012061  
+doi:10.1088/1757-899X/998/1/012061  
+
+This work provides empirical validation for heat input, microstructure, hardness, and oxidation behavior modeling.
 
 ---
 
-# 🧬 **Scientific Foundation**
-
-Material hardness & oxidation behavior directly affect:
-
-- Wear resistance  
-- Creep strength  
-- Oxidation kinetics  
-- High-temperature reliability  
-- Hardfacing performance  
-- Microstructure evolution  
-
-This system functions as an **AI surrogate model**, reducing expensive lab experimentation.
-
-### 📘 Primary Reference  
-C. Dinesh Chandra et al.  
-*Experimental Studies of Stellite‑6 Hardfaced Layer on Ferrous Materials by TIG Surfacing Process*  
-IOP Conf. Ser.: Mater. Sci. Eng. 998 (2020) 012061  
-DOI: 10.1088/1757-899X/998/1/012061  
-
----
-
-# 🏗 **Architecture Overview**
+# 🏗 System Architecture
 
 ```
-material-hardness-oxidation-prediction/
-│
-├── data/                     # Raw & cleaned datasets
-├── docs/                     # Full documentation suite
-├── models/                   # Trained models, SHAP dumps, metadata
-│
-├── src/
-│   ├── app/                  # Flask UI + routes + templates
-│   ├── inference/            # Prediction, validation, preprocessing
-│   ├── models/               # Training pipelines + evaluation
-│   └── utils/                # Logging, file I/O, helpers
-│
-├── screenshots/              # UI + SHAP visualization assets
-├── tests/                    # Unit + integration tests
-│
-├── render.yaml               # Render deployment configuration
-├── requirements.txt          # Python dependencies
-├── Procfile                  # Gunicorn startup
-└── runtime.txt               # Deployment runtime
+                   ┌───────────────────────────┐
+                   │     Web UI (Flask)         │
+                   │  HTML • CSS • JS • Charts  │
+                   └───────────────┬───────────┘
+                                   │
+                         User Input Validation
+                                   │
+                   ┌───────────────▼──────────────┐
+                   │   Inference Engine (Python)   │
+                   │  Pydantic • Feature Builder   │
+                   └───────────────┬──────────────┘
+                                   │
+         ┌─────────────────────────┼──────────────────────────┐
+         ▼                         ▼                          ▼
+┌────────────────┐      ┌──────────────────┐       ┌──────────────────────┐
+│ Hardness Model │      │ Oxidation Model │       │   Metadata System     │
+│ LinearReg / RF │      │ Random Forest   │       │ Versioning • Hashing  │
+└───────┬────────┘      └──────────┬──────┘       └──────────┬───────────┘
+        │                           │                        │
+        └────────────┬──────────────┴──────────────┬─────────┘
+                     ▼                             ▼
+         ┌───────────────────┐          ┌────────────────────────┐
+         │ SHAP Explainability│          │ Performance Diagnostics │
+         │ Global + Local     │          │ Residuals • R² • MAE    │
+         └───────────┬────────┘          └───────────┬────────────┘
+                     ▼                             ▼
+                   JSON                        UI Charts
+                   Plots                       Reports
 ```
 
 ---
 
-# 🧩 **System Diagram**
+# 🖥️ UI Showcase
 
-```
-               ┌─────────────────────────┐
-               │  Web UI (Flask + Jinja) │
-               └─────────────┬───────────┘
-                             │
-                             ▼
-               ┌─────────────────────────┐
-               │ Request Validator       │
-               │ (Pydantic Schema)       │
-               └─────────────┬───────────┘
-                             │
-                             ▼
-               ┌─────────────────────────┐
-               │ Preprocessing Pipeline  │
-               │ Scaling, FE, Encoding   │
-               └─────────────┬───────────┘
-                             │
-                ┌────────────┴────────────┐
-                ▼                           ▼
-    ┌──────────────────────┐     ┌────────────────────────┐
-    │ Hardness Model       │     │ Oxidation Model         │
-    │ (RF / LR)            │     │ (RF / LR)               │
-    └────────────┬─────────┘     └───────────┬────────────┘
-                 │                           │
-                 └──────────────┬────────────┘
-                                ▼
-                 ┌──────────────────────────┐
-                 │ SHAP Explainability Layer│
-                 └──────────────┬───────────┘
-                                ▼
-                 ┌──────────────────────────┐
-                 │ JSON Response + Visuals  │
-                 └──────────────────────────┘
-```
+## Home Interface  
+![Home](screenshots/demo-01-home.png)
+
+## Prediction Workflow  
+![Predict](screenshots/demo-02-predict.png)
+
+## SHAP — Hardness  
+![SHAP Hardness](screenshots/demo-03-hardness-shap.png)
+
+## SHAP — Oxidation  
+![SHAP Oxidation](screenshots/demo-04-oxidation-shap.png)
 
 ---
 
-# 📊 **Exploratory Data Analysis (EDA)**
+# 📊 Exploratory Data Analysis (EDA)
 
-The system includes full EDA:
+### Hardness Dataset  
+![Hardness Corr](src/app/static/plots/eda_hardness_correlation.png)
+![Hardness Hist](src/app/static/plots/eda_hardness_hist.png)
 
-- Correlation heatmaps  
-- Distribution plots  
-- Feature coupling analysis  
-- Material-process relationship mapping  
-- Outlier detection  
-- Feature variance reports  
+### Oxidation Dataset  
+![Ox Corr](src/app/static/plots/eda_oxidation_correlation.png)
+![Ox Hist](src/app/static/plots/eda_oxidation_hist.png)
 
 ---
 
-# 📈 **Modeling Approach**
+# 📈 Model Performance & Diagnostics
 
-### **Algorithms Supported**
-| Target | Models |
-|--------|--------|
+### Hardness Model  
+![Actual vs Pred](src/app/static/plots/perf_hardness_actual_vs_pred.png)
+![Residuals](src/app/static/plots/perf_hardness_residuals.png)
+![Feature Coefficients](src/app/static/plots/fi_hardness_coefficients.png)
+
+### Oxidation Model  
+![Actual vs Pred](src/app/static/plots/perf_oxidation_actual_vs_pred.png)
+![Residuals](src/app/static/plots/perf_oxidation_residuals.png)
+![Feature Importances](src/app/static/plots/fi_oxidation_importances.png)
+
+---
+
+# 🧠 Machine Learning Pipelines
+
+## Feature Engineering
+- Numerical scaling  
+- Composition preprocessing  
+- Heat input features  
+- Outlier handling  
+- Pipeline-based reproducibility  
+
+## Models
+| Task | Models |
+|------|--------|
 | Hardness | Linear Regression, Random Forest |
-| Oxidation Rate | Linear Regression, Random Forest |
+| Oxidation | Random Forest |
 
-### **Explainability**
-SHAP features included:
-
-- Global importance  
-- Local per‑sample breakdown  
-- Feature interaction effects  
-- Sensitivity analysis  
+## Explainability
+- SHAP global importance  
+- SHAP local per-sample breakdown  
 
 ---
 
-# 🧠 **Mathematical Formulation**
+# 📐 Mathematical Formulation
 
-### **Hardness Prediction**
-Given process variables \( X = \{x_1, x_2, ..., x_n\} \):
-
+### Hardness
 \[
-\hat{H}(X) = f_{\theta}(X)
+\hat{H} = f(X_{process}, X_{composition})
 \]
 
-Where \( f_{\theta} \) is the trained RF or LR model.
-
-### **Oxidation Rate Prediction**
-
+### Oxidation Rate
 \[
-\hat{O}(X) = g_{\phi}(X)
+\hat{O} = g(T, t, X_{alloy})
 \]
 
-Where \( g_{\phi} \) is an ML estimator capturing oxidation kinetics.
-
-### **Loss Function (Regression)**
-
+### Loss Function
 \[
 \mathcal{L} = \frac{1}{N} \sum (y_i - \hat{y}_i)^2
 \]
 
 ---
 
-# 🧱 **Feature Definitions**
+# 🧩 Directory Structure (Complete)
 
-| Feature | Description |
-|---------|-------------|
-| Current | Arc energy / heat input |
-| Voltage | Arc voltage |
-| Speed | Travel speed |
-| Thickness | Coating thickness |
-| Temp | Operating temperature |
-| Time | Oxidation duration |
-| … | Additional derived features |
+```
+material-hardness-oxidation-prediction/
+├── data/
+├── models/
+├── screenshots/
+├── src/
+│   ├── app/
+│   ├── inference/
+│   ├── models/
+│   └── utils/
+├── tests/
+├── requirements.txt
+├── render.yaml
+├── Procfile
+└── runtime.txt
+```
 
 ---
 
-# 🛠 **Development Setup**
+# ⚙️ Local Development
 
-```bash
+```
 git clone https://github.com/TheComputationalCore/Material-Hardness-Oxidation-Prediction
 cd Material-Hardness-Oxidation-Prediction
 conda create -n mhoc python=3.10
@@ -207,68 +184,52 @@ pip install -r requirements.txt
 python src/app/app.py
 ```
 
-Visit:
-```
-http://localhost:5000
-```
-
 ---
 
-# 🧪 **Testing Suite**
+# 🚀 Deployment (Render)
 
-```bash
-pytest -q
-```
-
----
-
-# 🚀 **Deployment Guide (Render)**
-
-### Build
+### Build  
 ```
 pip install -r requirements.txt
 ```
 
-### Start
+### Start  
 ```
 gunicorn "app.app:app" --chdir src --bind 0.0.0.0:$PORT --workers 2
 ```
 
 ---
 
-# 📘 **Documentation Suite**
-
-- `docs/MODEL_CARD.md`
-- `docs/ARCHITECTURE.md`
-- `docs/API_REFERENCE.md`
-- `docs/DATA_DICTIONARY.md`
-- `docs/EXPERIMENTS.md`
-- `docs/CHANGELOG.md`
-
----
-
-# 🧾 **Academic Citation**
-
+# 🧪 Testing
 ```
-@article{materialHardnessOxidationAI,
-  author    = {Dinesh Chandra},
-  title     = {AI-driven Prediction of Hardness and Oxidation in Stellite-6 Coatings},
-  journal   = {IOP Conference Series: Materials Science and Engineering},
-  volume    = {998},
-  year      = {2020},
-  doi       = {10.1088/1757-899X/998/1/012061}
-}
+pytest -q
 ```
 
 ---
 
-# 👤 **Author**
-
-**Dinesh Chandra — TheComputationalCore**  
-GitHub: https://github.com/TheComputationalCore  
-YouTube: https://www.youtube.com/@TheComputationalCore  
+# 📘 Documentation
+- docs/MODEL_CARD.md  
+- docs/ARCHITECTURE.md  
+- docs/API_REFERENCE.md  
 
 ---
 
-# 📦 **License**
-MIT License — free for academic, commercial, and industrial use.
+# 🧾 Citation
+
+```
+D. Chandra et al.
+"Experimental Studies of Stellite-6 Hardfaced Layer on Ferrous Materials by TIG Surfacing Process."
+IOP Conference Series: Materials Science and Engineering,
+Vol. 998, 012061, 2020.
+doi:10.1088/1757-899X/998/1/012061
+```
+
+---
+
+# 👤 Author
+**Dinesh Chandra — TheComputationalCore**
+
+---
+
+# 🔒 License
+MIT License  
