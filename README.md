@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assests/banner.png" alt="Material Hardness & Oxidation Prediction Banner">
+  <img src="assets/banner.png" alt="Material Hardness & Oxidation Prediction Banner">
 </p>
 
 # 🌌 Material Hardness & Oxidation Prediction  
